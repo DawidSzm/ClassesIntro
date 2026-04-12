@@ -45,7 +45,15 @@ public class Player
     }
     public void Move(int diffX, int diffY)
     {
-        x += diffX;
-        y += diffY;
+        int targetX = x + diffX;
+        int targetY = y + diffY;
+        if (targetX >= 0 && targetX < Console.BufferWidth)
+        {
+            x = targetX;
+        }
+        if (targetY >= 0 && targetY < Console.BufferHeight)
+        {
+            y = targetY;
+        }
     }
 }
