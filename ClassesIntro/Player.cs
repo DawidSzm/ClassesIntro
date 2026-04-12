@@ -34,7 +34,9 @@ public class Player
 
     public void Display()
     {
-        Console.WriteLine(avatar);
+        Console.Clear();
+        Console.SetCursorPosition(x, y);
+        Console.Write(avatar);
     }
 
     public void Move(int diffX, int diffY)
