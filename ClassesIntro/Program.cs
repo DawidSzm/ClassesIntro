@@ -8,7 +8,7 @@ while (true)
 {
     hero.Display();
     ConsoleKeyInfo keyInfo = Console.ReadKey(true);
-
+    hero.ClearPlayerPosition();    
     if (keyInfo.Key == ConsoleKey.A)
     {
         // ruch w lewo
