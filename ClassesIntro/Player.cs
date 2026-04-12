@@ -29,33 +29,37 @@ public class Player
      * - lista zadań ze statusem ich realizacji
      */
     private string avatar = "@";
-    private int x;
-    private int y;
+    private Vector2 position;
 
+    public Player(Vector2 startingPosition)
+    {
+        position = startingPosition;
+    }
+    
     public void Display()
     {
-        Console.SetCursorPosition(x, y);
+        Console.SetCursorPosition(position.x, position.y);
         Console.Write(avatar);
     }
 
-    public void ClearPlayerPosition()
+    public void ClearAtPosition()
     {
-        Console.SetCursorPosition(x, y);
+        Console.SetCursorPosition(position.x, position.y);
         Console.Write(" ");
     }
+
     public void Move(int diffX, int diffY)
     {
-        int targetX = x + diffX;
-        int targetY = y + diffY;
+        Vector2 targetPosition = new Vector2(position.x + diffX, position.y + diffY);
         
-        if (targetX >= 0 && targetX < Console.BufferWidth)
+        if (targetPosition.x >= 0 && targetPosition.x < Console.BufferWidth)
         {
-            x = targetX;
+            position.x = targetPosition.x;
         }
-        
-        if (targetY >= 0 && targetY < Console.BufferHeight)
+
+        if (targetPosition.y >= 0 && targetPosition.y < Console.BufferHeight)
         {
-            y = targetY;
+            position.y = targetPosition.y;
         }
     }
 }
