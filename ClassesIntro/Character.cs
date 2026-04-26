@@ -1,6 +1,6 @@
 namespace ClassesIntro;
 
-public class Character
+public abstract class Character
 {
     private string avatar = "@";
     private Vector2 position;
@@ -33,4 +33,5 @@ public class Character
             position.y = targetPosition.y;
         }
     }
+    public abstract void ChooseAction();
 }
