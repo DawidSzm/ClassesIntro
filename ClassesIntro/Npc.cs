@@ -8,6 +8,7 @@ public class Npc : Character
 
     public override void ChooseAction()
     {
-        throw new NotImplementedException();
+        ClearAtPosition();
+        Move(1, 0);
     }
 }

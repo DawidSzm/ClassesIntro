@@ -5,7 +5,7 @@ Player hero = new Player(startingPosition);
 
 List<Character> heroClones = new List<Character>();
 heroClones.Add(hero);
-heroClones.Add(new Player(startingPosition));
+heroClones.Add(new Npc(startingPosition));
 
 foreach (Character clone in heroClones)
 {
