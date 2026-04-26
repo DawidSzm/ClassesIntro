@@ -8,7 +8,14 @@ public class Npc : Character
 
     public override void ChooseAction()
     {
+        List<Vector2> availableDirections =
+        [
+            new Vector2()
+        ];
+            
+        
         ClearAtPosition();
-        Move(1, 0);
+        Move(new Vector2(0, 1));
     }
 }
+

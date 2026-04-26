@@ -19,7 +19,12 @@ public abstract class Character
         Console.SetCursorPosition(position.x, position.y);
         Console.Write(" ");
     }
-    public void Move(int diffX, int diffY)
+
+    public void Move(Vector2 diff)
+    {
+        Move(diff.x, diff.y);
+    }
+    private void Move(int diffX, int diffY)
     {
         Vector2 targetPosition = new Vector2(position.x + diffX, position.y + diffY);
         
