@@ -26,7 +26,7 @@ while (true)
         Character character = heroClones[i];
         character.Display();
         
-        character.ChooseAction();
+        character.ChooseAction(map);
         
         character.Display();
     }
